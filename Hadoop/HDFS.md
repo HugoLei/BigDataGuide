@@ -28,11 +28,7 @@ Hadoop——HDFS
 &emsp; （2）仅支持数据append（追加），不支持文件的随机修改。
 
 ### 4、HDFS组成架构（重点）
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E9%9D%A2%E8%AF%95%E9%A2%98Pics/HDFS%E6%96%87%E6%A1%A3-Pics/HDFS%E7%BB%84%E6%88%90%E6%9E%B6%E6%9E%84.png"/>  
-<p align="center">
-</p>
-</p>  
+![HDFS架构](./img/HDFS%E7%BB%84%E6%88%90%E6%9E%B6%E6%9E%84.png) 
 
 这种架构主要由四个部分组成，分别为HDFS Client、NameNode、DataNode和Secondary NameNode。下面我们分别介绍这四个组成部分。  
 1）Client：就是客户端。        
@@ -58,11 +54,7 @@ Hadoop——HDFS
 
 ## 二、HDFS数据流
 **1、HDFS的写数据流程**
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E9%9D%A2%E8%AF%95%E9%A2%98Pics/HDFS%E6%96%87%E6%A1%A3-Pics/HDFS%E7%9A%84%E5%86%99%E6%95%B0%E6%8D%AE%E6%B5%81%E7%A8%8B.png"/>  
-<p align="center">
-</p>
-</p>  
+![HDFS写数据流程](./img/HDFS的写数据流程.png)
 
 步骤：  
 &emsp; 1）客户端通过Distributed FileSystem模块向NameNode请求上传文件，NameNode检查目标文件是否已存在，父目录是否存在。   
@@ -108,11 +100,7 @@ Hadoop——HDFS
 </p>  
 
 **2、HDFS的读数据流程**  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E9%9D%A2%E8%AF%95%E9%A2%98Pics/HDFS%E6%96%87%E6%A1%A3-Pics/HDFS%E7%9A%84%E8%AF%BB%E6%95%B0%E6%8D%AE%E6%B5%81%E7%A8%8B.png"/>  
-<p align="center">
-</p>
-</p>  
+![HDFS读数据流程](img/HDFS的读数据流程.png)
 
 步骤：  
 &emsp; 1）客户端通过Distributed FileSystem向NameNode请求下载文件，NameNode通过查询元数据，找到文件块所在的DataNode地址。   

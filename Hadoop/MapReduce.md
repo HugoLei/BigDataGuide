@@ -77,28 +77,13 @@ Hadoop——MapReduce
 ## 二、MapReduce框架原理
 &emsp; 介绍MapReduce框架原理之前，先看下MapReduce框架的流程图，了解MapReduce的具体流程  
 **MapReduce详细工作流程（一）**  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/MapReduce/MapReduce%E8%AF%A6%E7%BB%86%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%EF%BC%88%E4%B8%80%EF%BC%89.png"/>  
-<p align="center">
-</p>
-</p>  
+![MR工作流程一](img/MapReduce详细工作流程（一）.png)
 
 **MapReduce详细工作流程（二）**  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/MapReduce/MapReduce%E8%AF%A6%E7%BB%86%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B%EF%BC%88%E4%BA%8C%EF%BC%89.png"/>  
-<p align="center">
-</p>
-</p>  
+![MR工作流二](img/MapReduce详细工作流程（二）.png)
 
 1-6步，是**InputFormat数据输入阶段 -> Map阶段**  
 7-16步，是**Shuffle阶段 -> Reduce阶段 -> OutPutFormat阶段**  
-
-**MapReduce的数据流**  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/MapReduce/MapReduce%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81.png"/>  
-<p align="center">
-</p>
-</p>  
 
 ### 1、InputFormat数据输入  
 1）**Job提交流程源码和切片源码详解**  
