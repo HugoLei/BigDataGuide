@@ -33,11 +33,7 @@ YARN
 &emsp; Container是YARN中的资源抽象，它封装了某个节点上的多维度资源，如内存、CPU、磁盘、网络等。  
 
 ### 3、YARN工作机制
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/YARN/YARN%E5%B7%A5%E4%BD%9C%E6%9C%BA%E5%88%B6.png"/>  
-<p align="center">
-</p>
-</p>  
+![YARN工作机制](img/YARN工作机制.png)
 
 **工作机制详解**：  
 （1）MR程序提交到客户端所在的节点。  
@@ -98,18 +94,10 @@ YARN
 ```  
 
 1）先进先出调度器（FIFO）  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/YARN/%E5%85%88%E8%BF%9B%E5%85%88%E5%87%BA%E8%B0%83%E5%BA%A6%E5%99%A8%EF%BC%88FIFO%EF%BC%89.png"/>  
-<p align="center">
-</p>
-</p>  
+![FIFO](img/先进先出调度器（FIFO）.png)
 
 2）容量调度器（Capacity Scheduler）  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/YARN/%E5%AE%B9%E9%87%8F%E8%B0%83%E5%BA%A6%E5%99%A8%EF%BC%88Capacity%20Scheduler%EF%BC%89.png"/>  
-<p align="center">
-</p>
-</p>  
+![](img/容量调度器（Capacity%20Scheduler）.png) 
 
 （1）支持多个队列，每个队列可配置一定的资源量，每个队列采用FIFO调度策略。  
 （2）为了防止同一个用户的作业独占队列中的资源，**该调度器会对同一用户提交的作业所占资源量进行限定**。  
@@ -118,11 +106,7 @@ YARN
 （5）三个队列同时按照任务的先后顺序依次执行，比如，job11、job21和job31分 别排在队列最前面，是最先运行，也是同时运行。  
 
 3）公平调度器（Fair Scheduler）  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/YARN/%E5%85%AC%E5%B9%B3%E8%B0%83%E5%BA%A6%E5%99%A8%EF%BC%88Fair%20Scheduler%EF%BC%89.png"/>  
-<p align="center">
-</p>
-</p>  
+![](img/公平调度器（Fair%20Scheduler）.png)
 
 &emsp; **支持多队列多用户，每个队列中的资源量可以配置，同一队列中的作业公平共享队列中所有资源**。  
 &emsp; 比如有三个队列: queueA、 queueB和queueC，**每个队列中的ob按照优先级分配资源，优先级越高分配的资源越多**，但是每个job都会分配到资源以确保公平。在资源有限的情况下，每个job理想情况下获得的计算资源与实际获得的计算资源存在一种差距，这个差距就叫做**缺额**。在同一一个队列中，**job的资源缺额越大，越先获得资源优先执行**。作业是按照缺额的高低来先后执行的，而且可以看到上图**有多个作业同时运行**。   

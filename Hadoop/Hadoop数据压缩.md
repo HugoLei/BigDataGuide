@@ -47,11 +47,7 @@ Hadoop——数据压缩
 &emsp; `应用场景`：当Mapreduce作业的Map输出的数据比较大的时候，作为Map到Reduce的中间数据的压缩格式；或者作为一个Mapreduce作业的输出和另外一个Mapreduce作业的输入。  
 
 ### 4、压缩位置选择
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/%E6%95%B0%E6%8D%AE%E5%8E%8B%E7%BC%A9/%E5%8E%8B%E7%BC%A9%E4%BD%8D%E7%BD%AE%E9%80%89%E6%8B%A9.png"/>  
-<p align="center">
-</p>
-</p>  
+![压缩位置选择](img/压缩位置选择.png)
 
 
 
