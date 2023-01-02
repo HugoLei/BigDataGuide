@@ -5,18 +5,10 @@ RDD概述
 &emsp; **MR的这种方式对数据领域两种常见的操作不是很高效**。第一种是**迭代式的算法**。比如机器学习中ALS、凸优化梯度下降等。这些都需要基于数据集或者数据集的衍生数据反复查询反复操作。**MR这种模式不太合适，即使多MR串行处理，性能和时间也是一个问题**。数据的共享依赖于磁盘。另外一种是**交互式数据挖掘**，MR显然不擅长。  
 &emsp; MR和Spark中的迭代对比：  
 &emsp; MR中的迭代  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Spark%E6%96%87%E6%A1%A3Pics/Spark%20Core/RDD%E6%A6%82%E8%BF%B0/MR%E4%B8%AD%E7%9A%84%E8%BF%AD%E4%BB%A3.png"/>  
-<p align="center">
-</p>
-</p>  
+![](../img/MR中的迭代.png) 
 
 &emsp; Spark中的迭代  
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Spark%E6%96%87%E6%A1%A3Pics/Spark%20Core/RDD%E6%A6%82%E8%BF%B0/Spark%E4%B8%AD%E7%9A%84%E8%BF%AD%E4%BB%A3.png"/>  
-<p align="center">
-</p>
-</p>  
+![](../img/Spark中的迭代.png)
 
 &emsp; Spark是一个效率非常快，且能够支持迭代计算和有效数据共享的模型，适合数据领域常见的两种操作。而且**RDD是基于工作集的工作模式，更多的是面向工作流**。  
 

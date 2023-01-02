@@ -28,11 +28,7 @@
 &emsp; 稀疏主要是针对Hbase列的灵活性，在列族中，你可以指定任意多的列，在列数据为空的情况下，是不会占用存储空间的。  
 
 ### 3、HBase架构
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/HBase%E6%96%87%E6%A1%A3Pics/HBase%E6%A6%82%E8%BF%B0/HBase%E6%9E%B6%E6%9E%84.png"/>  
-<p align="center">
-</p>
-</p>  
+![](../Hadoop/img/HBase架构.png)
 
 &emsp; 从图中可以看出Hbase是由Client、Zookeeper、Master、HRegionServer、HDFS等几个组件组成，下面来介绍一下几个组件的相关功能：  
 1）Client  
