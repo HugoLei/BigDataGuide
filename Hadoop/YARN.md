@@ -4,11 +4,7 @@ YARN
 &emsp; Yarn是一个资源调度平台，负责为运算程序提供服务器运算资源，相当于一个分布式的操作系统平台，而MapReduce等运算程序则相当于运行于操作系统之上的应用程序。  
 
 ### 2、YARN基本架构
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Hadoop%E6%96%87%E6%A1%A3Pics/YARN/YARN%E5%9F%BA%E6%9C%AC%E6%9E%B6%E6%9E%84.png"/>  
-<p align="center">
-</p>
-</p>  
+![](img/YARN基本架构.png) 
 
 &emsp; YARN主要由**ResourceManager、NodeManager、ApplicationMaster和Container**等组件构成，如上图所示。
 
