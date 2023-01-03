@@ -1,11 +1,7 @@
 Spark运行模式
 ---
 ### 一、集群角色
-<p align="center">
-<img src="https://github.com/Dr11ft/BigDataGuide/blob/master/Pics/Spark%E6%96%87%E6%A1%A3Pics/Spark%E8%BF%90%E8%A1%8C%E6%A8%A1%E5%BC%8F/Local%E6%A8%A1%E5%BC%8F/%E9%9B%86%E7%BE%A4%E6%A8%A1%E5%BC%8F.png"/>  
-<p align="center">
-</p>
-</p>  
+![](img/集群模式.png)
 
 &emsp; 从**物理部署层面**上来看，Spark主要分为两种类型的节点：**Master节点和Worker节**点。**Master节点**主要运行集群管理器的中心化部分，所承载的作用是分配Application到Worker节点，维护Worker节点，Driver，Application的状态。**Worker节点**负责具体的业务运行。  
 &emsp; 从**Spark程序运行层面**来看，Spark主要分为**驱动器节点和执行器节点**。
